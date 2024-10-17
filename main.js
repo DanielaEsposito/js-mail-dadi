@@ -19,18 +19,21 @@ const isUserEmailValid = userEmail.includes("@") && userEmail.includes(".");
 // SE l'emeil dell'utente è valida controllo che l'email dell'utente sia presente nella lista e mando un messaggio
 
 if(isUserEmailValid){
-
+let emailIsFound = false
     for (let i = 0; i < emails.length ; i ++){
-        userEmail === emails[i];
-        console.log("puoi accedere");
-        alert("puoi accedere") 
-
-       // SE l'email non è presente nell'elenco comunico all'utente che l'email non può accedere
-
-        if(userEmail !== emails[i]){
-            console.log("Non puoi accedere");
-            alert("puoi accedere")     
+       const currentEmail= emails[i];
+    
+        if( userEmail === emails[i]){
+            emailIsFound = true
+        
         } 
+
+    }
+    if(emailIsFound){
+        alert("Puoi accedere")
+    }
+    else{
+        alert("Non puoi accedere")
     }
 }
 // ALTRIMENTI se l'email non è valida comunico all'utente che l'email non è valida 

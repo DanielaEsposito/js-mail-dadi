@@ -3,11 +3,11 @@
 
 // genero i numeri random del computer e del giocatore
 const userNumber =  Math.floor(Math.random() * 6) + 1;
-const user = "Numero del giocatore :"
+const user = "Numero del giocatore: "
 console.log(user + userNumber);
 
 const computerNumber =  Math.floor(Math.random() * 6) + 1;
-const computer= "Numero del computer :"
+const computer= "Numero del computer: "
 console.log(computer + computerNumber);
 
 let winner = "";
