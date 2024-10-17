@@ -16,26 +16,26 @@ const userEmail = prompt("scrivi qui la tua email");
 
 const isUserEmailValid = userEmail.includes("@") && userEmail.includes(".");
 
-// SE l'emeil dell'utente è valida controllo che l'email dell'utente sia presente nella lista mando un messaggio
+// SE l'emeil dell'utente è valida controllo che l'email dell'utente sia presente nella lista e mando un messaggio
 
 if(isUserEmailValid){
 
     for (let i = 0; i < emails.length ; i ++){
         userEmail === emails[i];
         console.log("puoi accedere");
-        alert("puoi accedere")   
+        alert("puoi accedere") 
+
+       // SE l'email non è presente nell'elenco comunico all'utente che l'email non può accedere
+
+        if(userEmail !== emails[i]){
+            console.log("Non puoi accedere");
+            alert("puoi accedere")     
+        } 
     }
 }
+// ALTRIMENTI se l'email non è valida comunico all'utente che l'email non è valida 
 else{
     console.log("Email non valida!");
     alert("Email non valida !")
 }
 
-// ALTRIMENTI se l'email non è valida comunico all'utente che l'email non è valida 
-
-
-
-
-
-//  Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-//  Stabilire il vincitore, in base a chi fa il punteggio più alto.
